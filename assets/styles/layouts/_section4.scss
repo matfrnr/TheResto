@@ -1,0 +1,136 @@
+.section4 {
+    padding: 50px 20px 90px;
+
+    @media screen and (max-width: 680px) {
+        display: none;
+    }
+
+    .events-container {
+        max-width: 1000px;
+        margin: 0 auto;
+
+        h2 {
+            font-family: $font1;
+            color: $or;
+            font-weight: 100;
+            font-size: 2.5rem;
+        }
+        h4 {
+            text-transform: uppercase;
+            color: $white;
+            font-size: 2rem;
+            font-family: $font2;
+            letter-spacing: 2px;
+            margin-top: -12px;
+            font-weight: 900;
+        }
+        img {
+            margin: 30px 0;
+        }
+
+        .event-grid {
+            display: grid;
+            grid-template-columns: 58% 42%;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas: "event1 event3" "event2 event3";
+            gap: 20px;
+
+            .date-content {
+                background: $black;
+                height: 86px;
+                width: 86px;
+                margin: 0 auto;
+                color: $white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                line-height: 22px;
+
+                h6 {
+                    font-size: 1.7rem;
+                }
+            }
+
+            .event-left {
+                display: grid;
+                grid-template-columns: 39% 61%;
+                text-align: left;
+
+                .date {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .address {
+                    color: $black;
+                    padding: 30px 20px;
+                }
+            }
+            .address {
+                background: $white;
+
+                p {
+                    color: $grey;
+                    font-size: 0.9rem;
+                    margin-top: 20px;
+                    letter-spacing: 1px;
+
+                    i {
+                        margin-right: 3px;
+                        font-size: 0.7rem;
+                        transform: translateY(-2px);
+
+                        &:nth-child(2) {
+                            margin-left: 10px;
+                        }
+                    }
+                }
+                h5 {
+                    letter-spacing: 2px;
+                    margin-top: 25px;
+                }
+
+                h3 {
+                    letter-spacing: 1px;
+                    font-size: 1.3rem;
+                    font-weight: 500;
+                    padding-left: 8px;
+                    margin-bottom: 10px;
+                }
+            }
+
+            .event-1 {
+                grid-area: event1;
+
+                .date {
+                    background: url(../img/event-01.jpg) center / cover;
+                }
+            }
+            .event-2 {
+                grid-area: event2;
+
+                .date {
+                    background: url(../img/event-02.jpg) center / cover;
+                }
+            }
+            .event-3 {
+                grid-area: event3;
+                background: url(../img/event-03.jpg) center / cover;
+                padding: 25px;
+
+                .address {
+                    height: 100%;
+                    padding: 0 12px;
+
+                    h3 {
+                        margin: 40px 0 15px;
+                    }
+                    h5 {
+                        padding: 45px 0;
+                    }
+                }
+            }
+        }
+    }
+}

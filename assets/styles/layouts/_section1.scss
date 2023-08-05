@@ -1,0 +1,48 @@
+.one {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background: $white;
+
+    @media screen and (max-width: 680px) {
+        grid-template-columns: 100%;
+    }
+
+    div:nth-child(1) {
+        margin: 15px;
+        padding: 30px 15px;
+        border: 1px dashed $or;
+
+        span {
+            font-family: $font1;
+            color: $or;
+            font-size: 2rem;
+            font-weight: 500;
+        }
+        .lorem {
+            padding: 30px 0;
+        }
+        .chef {
+            border-radius: 50%;
+            height: 70px;
+            padding: 0 0 8px;
+        }
+        h3 {
+            padding-bottom: 20px;
+            text-transform: uppercase;
+            font-family: $font2;
+            margin-top: -10px;
+        }
+        .bottomImage {
+            font-family: $font2;
+        }
+        .end {
+            text-transform: uppercase;
+            color: $grey;
+            font-size: 0.8rem;
+        }
+    }
+
+    .imgSectionOne {
+        background: url(../img/store-01.jpg) center / cover;
+    }
+}

@@ -1,0 +1,101 @@
+footer {
+    background: url(../img/bg-footer.jpg) center / cover;
+    text-align: left;
+    padding: 65px 32px;
+    color: $white;
+
+    @media screen and (max-width: 680px) {
+        background: $black;
+    }
+
+    .footer-content {
+        max-width: 1000px;
+        display: grid;
+        margin: 0 auto;
+        grid-template-columns: 50% 50%;
+
+        .left-part {
+            padding-right: 30px;
+            line-height: 30px;
+
+            @media screen and (max-width: 680px) {
+                display: none;
+            }
+            h2 {
+                font-family: $font1;
+                font-size: 2.5rem;
+                font-weight: 100;
+                color: $or;
+                margin-bottom: 15px;
+            }
+            p {
+                font-size: 0.9rem;
+                color: $grey;
+            }
+        }
+        .right-part {
+            padding-left: 50px;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+
+            @media screen and (max-width: 500px) {
+                padding-left: 0;
+            }
+
+            h3 {
+                font-size: 0.85rem;
+            }
+
+            input {
+                margin-top: 15px;
+                background: none;
+                border: 1px solid rgba(166, 114, 69, 0.15);
+                padding: 7px 13px;
+                width: 250px;
+                color: $grey;
+
+                &:focus {
+                    border: 1px solid bisque;
+                }
+            }
+
+            .follow-us {
+                display: flex;
+                margin-top: 50px;
+
+                @media screen and (max-width: 680px) {
+                    margin-top: 35px;
+                }
+
+                h3 {
+                    @media screen and (max-width: 680px) {
+                        display: none;
+                    }
+                }
+
+                ul {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+                    color: #595956;
+                    width: 50%;
+                    font-size: 0.8rem;
+
+                    @media screen and (max-width: 680px) {
+                        font-size: 1.2rem;
+                        width: 75%;
+                    }
+
+                    i {
+                        transition: 0.2s;
+                        cursor: pointer;
+
+                        &:hover {
+                            transform: scale(1.3);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
